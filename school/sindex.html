@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Index</title>
+        <link rel="stylesheet" href="sindex.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                var Height1 = $("#sec1").css('height', 'auto').height(),
+                    Height2 = $("#majorcontain").css('height', 'auto').height(),
+                    Height3 = $("#sec3").css('height', 'auto').height(),
+                    Height4 = $("#sec4").css('height', 'auto').height(),
+                    Height5 = $("#majorcontain").css('height', 'auto').height(),
+                    Height6 = $(".imagesize").css('height', 'auto').height();
+
+                $(".schoolsec").css("height", "300px")
+
+                $("#sec1").mouseleave(function(){
+                    $("#sec1left").css("visibility", "collapse");
+                    $("#sec1right").css("visibility", "collapse");
+                    $("#sec1").css("height", "300px");
+                    $("#f1").show();
+                });
+
+                $("#sec1").mouseenter(function(){
+                    $("#sec1left").css("visibility", "visible");
+                    $("#sec1right").css("visibility", "visible");
+                    $("#f1").hide();
+                    $("#sec1").animate({height: Height1});
+                });
+
+
+                $("#sec2").mouseleave(function(){
+                    $("#majorcontain").css("visibility", "collapse");
+                    $("#sec2").css("height", "300px");
+                    $("#sec2").css("flex-direction", "row");
+                    $("#f2").show();
+                });
+
+                $("#sec2").mouseenter(function(){
+                    $("#majorcontain").css("visibility", "visible");
+                    $("#sec2").animate({height: '100%'});
+                    $("#sec2").css("flex-direction", "column");
+                    $("#f2").hide();
+                });
+
+                $("#sec3").mouseleave(function(){
+                    $("#sec3left").css("visibility", "collapse");
+                    $("#sec3right").css("visibility", "collapse");
+                    $("#sec3").css("height", "300px");
+                    $("#f3").show();;
+                });
+
+                $("#sec3").mouseenter(function(){
+                    $("#sec3left").css("visibility", "visible");
+                    $("#sec3right").css("visibility", "visible");
+                    $("#sec3").animate({height: Height3});
+                    $("#f3").hide();
+                });
+
+                $("#sec4").mouseleave(function(){
+                    $("#sec4left").css("visibility", "collapse");
+                    $("#sec4right").css("visibility", "collapse");
+                    $("#sec4").css("flex-direction", "row");
+                    $("#sec4").css("height", "300px");
+                    $("#f4").show();
+                });
+
+                $("#sec4").mouseenter(function(){
+                    $("#sec4left").css("visibility", "visible");
+                    $("#sec4right").css("visibility", "visible");
+                    $("#sec4").css("flex-direction", "row");
+                    $("#sec4").animate({height: Height4});
+                    $("#f4").hide();
+                });
+
+                var menu = $("linkcontain"),
+                    y = menu.scrollTop(),
+                    height = $("#splasharea").height();
+
+                if (y > height) {
+                    menu.addClass("fix");
+                } else {
+                    menu.removeClass("fix");
+                }
+            });
+        </script>
+    </head>
+    <body id="indexbody">
+       <div id="splasharea">
+            <div id="introcontain">
+                <p id="introtext">
+                    <img src="images//cab_logo.png" class="cablogo">
+                </p>
+                <a href="#menu" id="enterlink">EXPLORE</a>
+            </div>
+        </div>
+        <div class="linkcontain" id="menu">
+            <ul class="links">
+                <li><a href="sindex.html" class="button">SCHOOL</a></li>
+                <li><a href="chapter.html" class="button">CHAPTER</a></li>
+                <li><a href="../index.html" class="button">DESIGN BRIEF</a></li>
+            </ul>
+        </div>
+            <div id="sec1" class="schoolsec">
+                <div class="folded">
+                    <p class="fronttext" id="f1">ABOUT</p>
+                </div>
+                <div id="sec1left" class="collapsing">
+                    <h2>ABOUT</h2>
+                    <p class="bodytext">Oluptat eoste laboreped que necte pore, tenis eum ut es et, tenderem ium volo occae vellic tet, tem nam eveni cum quiderchil eaqui opti dist, con nobis unt, voluptus estia num enis adiorro omnienda volectota con niet ped mi, ommod quam earum, verum quo in re vention nonseniendus ate invenduciis solupta spedit illibus aligni que re sa nonecabo. Mos adit ulpari se voluptatia doluptat ullaccae voloreh enditiur, inciatq uaestrunt.
+Bis aut fuga. Dem quist voluptat ulpa cone occum cuptate caeserendis santia suntium faccum landund elest, as quid quo ipisse soloratur? Qui cuptatur?</p>
+                    <img id="year25" src="images/MECH_Cab_Calloway_25_years_edit2.jpg">
+                    <p class="bodytext">Oluptat eoste laboreped que necte pore, tenis eum ut es et, tender-
+em ium volo occae vellic tet, tem nam eveni cum quiderchil eaqui opti dist, con nobis unt, voluptus estia num enis adiorro omnien- da volectota con niet ped mi, ommod quam earum, verum quo</p>
+                </div>
+                <img src="images/Copy%20of%20DSC_3714.JPG" id="sec1right" class="collapsing">
+            </div>
+            <div id="sec2" class="schoolsec">
+                <p class="fronttext" id="f2">MAJORS</p>
+                <h2 class="collapsing">CURRICULUM</h2>
+                <div id="majorcontain" class="collapsing">
+                    <h3>MAJORS</h3>
+                    <div id="imagecontain">
+                        <div class="imagesize"><img class="majorpics" src="images/DSC_4555_major.jpg">
+                        <p class="imagewords">descdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdesc</p>
+                        </div>
+                        <div class="imagesize"><img class="majorpics" src="images/DSC_4740_major.jpg">
+                        <p class="imagewords">descdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdesc</p>
+                        </div>
+                        <div class="imagesize"><img class="majorpics" src="images/DSC_5164_major.jpg">
+                        <p class="imagewords">descdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdesc</p>
+                        </div>
+                    </div>
+                    <div id="imagecontain">
+                        <div class="imagesize"><img class="majorpics" src="images/DSC_0119_major.jpg">
+                        <p class="imagewords">descdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdesc</p>
+                        </div>
+                        <div class="imagesize"><img class="majorpics" src="images/DSC_0177_major.jpg">
+                        <p class="imagewords">descdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdesc</p>
+                        </div>
+                        <div class="imagesize"><img class="majorpics" src="images/theatre_major.jpg">
+                        <p class="imagewords">descdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdesc</p>
+                        </div>
+                    </div>
+                    <div id="imagecontain">
+                        <div class="imagesize"><img class="majorpics" src="images/DSC_1047_major.jpg">
+                        <p class="imagewords">descdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdesc</p>
+                        </div>
+                        <div class="imagesize"><img class="majorpics" src="images/DSC_3628_major.jpg">
+                        <p class="imagewords">descdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdesc</p>
+                        </div>
+                        <div class="imagesize"><img class="majorpics" src="images/DSC_0412_major.JPG">
+                        <p class="imagewords">descdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdesc</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="sec3" class="schoolsec">
+                <p class="fronttext" id="f3">CTE COURSES</p>
+                <div id="sec3left" class="collapsing">
+                    <h4>CAREER AND TECHNOLOGY COURSES</h4>
+                    <p class="bodytext">Oluptat eoste laboreped que necte pore, tenis eum ut es et, tender-em ium volo occae vellic tet, tem nam eveni cum quiderchil eaquiopti dist, con nobis unt, voluptus estia num enis adiorro omnien-da volectota con niet ped mi, ommod quam earum, verum quoin re vention nonseniendus ate invenduciis solupta spedit illibusaligni que re sa nonecabo. Mos adit ulpari se voluptatia doluptatullaccae voloreh enditiur, inciatq uaestrunt.Bis aut fuga. Dem quist voluptat ulpa cone occum cuptate cae-serendis santia suntium faccum landund elest, as quid quo ipisse soloratur? Qui cuptatur? Itatis et officate enienimperro volum hilique volor reptati urempos quatium vidis remporrovit faces quo deribusam, idendandis estis
+rehenis estemporeped ut moditatatem quam re occum eos dem
+vellecum aut apic tem quame ducipsu ndenia consequae volum
+que peribeate nonsequ isiminvendae este nones quam ni cus
+alique sam quuntis et velento ruptas est qui te que latur?</p>
+                </div>
+                <img src="images/_DSC0647_edit.jpg" id="sec3right" class="collapsing">
+            </div>
+            <div id="sec4" class="schoolsec">
+                <p class="fronttext" id="f4">STEM CURRICULUM</p>
+                <div id="sec4left" class="collapsing">
+                    <h4>CAREER AND TECHNOLOGY COURSES</h4>
+                    <p class="bodytext">Oluptat eoste laboreped que necte pore, tenis eum ut es et, tender-em ium volo occae vellic tet, tem nam eveni cum quiderchil eaquiopti dist, con nobis unt, voluptus estia num enis adiorro omnien-da volectota con niet ped mi, ommod quam earum, verum quoin re vention nonseniendus ate invenduciis solupta spedit illibusaligni que re sa nonecabo. Mos adit ulpari se voluptatia doluptatullaccae voloreh enditiur, inciatq uaestrunt.Bis aut fuga. Dem quist voluptat ulpa cone occum cuptate cae-serendis santia suntium faccum landund elest, as quid quo ipisse soloratur? Qui cuptatur? Itatis et officate enienimperro volum hilique volor reptati urempos quatium vidis remporrovit faces quo deribusam, idendandis estis
+rehenis estemporeped ut moditatatem quam re occum eos dem
+vellecum aut apic tem quame ducipsu ndenia consequae volum
+que peribeate nonsequ isiminvendae este nones quam ni cus
+alique sam quuntis et velento ruptas est qui te que latur?</p>
+                </div>
+                <img src="images/DSC_0515_edit.jpg" id="sec4right" class="collapsing">
+            </div>
+        <div id="footer">
+            <p id="desc">Atiamusda dolles ad qui omnis dolorem sin por a inis et quaernatum voluptia </p>
+            <div id="footgroup">
+                <p class="foottext">Piet untius, te et qui tectus, sit qui a velloribus dit harum in reius sum aut quatio </p>
+                <hr class="linksplit2">
+                <p class="foottext">Piet untius, te et qui tectus, sit qui a velloribus dit harum in reius sum aut quatio </p>
+            </div>
+        </div>
+    </body>
+</html>

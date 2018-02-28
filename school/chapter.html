@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Our Chapter</title>
+        <link rel="stylesheet" href="sindex.css">
+    </head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                var Height1 = $("#chapsec1").css('height', 'auto').height(),
+                    Height2 = $("#chapsec2").css('height', 'auto').height(),
+                    Height3 = $("#chapsec3").css('height', 'auto').height(),
+                    Height4 = $("#chapsec4").css('height', 'auto').height();
+
+                $(".chapsec").css("height", "300px")
+
+                $("#chapsec1").mouseleave(function(){
+                    $("#title1").css("visibility", "collapse");
+                    $("#para1").css("visibility", "collapse");
+                    $("#chapsec1").css("height", "300px");
+                    $("#chapsec1").css("flex-direction", "row");
+                    $("#f1").show();
+                    $("body").css("height", "auto");
+                });
+
+                $("#chapsec1").mouseenter(function(){
+                    $("#title1").css("visibility", "visible");
+                    $("#para1").css("visibility", "visible");
+                    $("#sec1").animate({height: Height1});
+                    $("#f1").hide();
+                    $("#chapsec1").css("flex-direction", "column");
+                    $("body").css("height", "auto");
+                });
+
+                $("#chapsec2").mouseleave(function(){
+                    $("#title2").css("visibility", "collapse");
+                    $("#para2").css("visibility", "collapse");
+                    $("#chapsec2").css("height", "300px");
+                    $("#chapsec2").css("flex-direction", "row");
+                    $("#f2").show();
+                    $("body").css("height", "auto");
+                });
+
+                $("#chapsec2").mouseenter(function(){
+                    $("#title2").css("visibility", "visible");
+                    $("#para2").css("visibility", "visible");
+                    $("#sec1").animate({height: Height2});
+                    $("#chapsec2").css("flex-direction", "column");
+                    $("#f2").hide();
+                    $("body").css("height", "auto");
+                });
+
+                $("#chapsec3").mouseleave(function(){
+                    $("#officerlist").css("visibility", "collapse");
+                    $(".officercont").css("visibility", "collapse");
+                    $(".officer").css("visibility", "collapse");
+                    $("#chapsec3").css("height", "300px");
+                    $("#chapsec3").css("flex-direction", "row");
+                    $("#f3").show();
+                    $("body").css("height", "auto");
+                });
+
+                $("#chapsec3").mouseenter(function(){
+                    $("#officerlist").css("visibility", "visible");
+                    $(".oficercont").css("visibility", "visible");
+                    $(".officer").css("visibility", "visible");
+                    $("#sec1").animate({height: Height3});
+                    $("#f3").hide();
+                    $("#chapsec3").css("flex-direction", "column");
+                    $("body").css("height", "auto");
+                });
+
+                $("#chapsec4").mouseleave(function(){
+                    $("#sec4left").css("visibility", "collapse");
+                    $("#sec4right").css("visibility", "collapse");
+                    $("#chapsec4").css("flex-direction", "row");
+                    $("#chapsec4").css("height", "300px");
+                    $("#f4").show();
+                    $("body").css("height", "auto");
+                });
+
+                $("#chapsec4").mouseenter(function(){
+                    $("#sec4left").css("visibility", "visible");
+                    $("#sec4right").css("visibility", "visible");
+                    $("#chapsec4").css("flex-direction", "row");
+                    $("#sec1").animate({height: Height4});
+                    $("#f4").hide();
+                    $("body").css("height", "auto");
+                });
+
+                var menu = $("linkcontain"),
+                    y = menu.scrollTop(),
+                    height = $("#splasharea").height();
+
+                if (y > height) {
+                    menu.addClass("fix");
+                } else {
+                    menu.removeClass("fix");
+                }
+            });
+        </script>
+    <body id="schoolbody">
+       <div id="splasharea">
+            <div id="introcontain">
+                <p id="introtext">
+                    <img src="images/TSA_Logo_4c.jpg" id="tsalogo">
+                </p>
+                <a href="#menu" id="enterlink">EXPLORE</a>
+            </div>
+        </div>
+        <div class="linkcontain" id="menu">
+            <ul class="links">
+                <li><a href="sindex.html" class="button">SCHOOL</a></li>
+                <li><a href="chapter.html" class="button">CHAPTER</a></li>
+                <li><a href="../index.html" class="button">DESIGN BRIEF</a></li>
+            </ul>
+        </div>
+            <div id="chapsec1" class="chapsec">
+                <p class="fronttext" id="f1">MOTTO/CREED</p>
+                <h2 id="title1" style="align-self: flex-start;" class="collapsing">MOTTO / CREED</h2>
+                <br/>
+                <p id="para1" class="conttext" class="collapsing">Oluptat eoste laboreped que necte pore, tenis eum ut es et, tenderem ium volo occae vellic tet, tem nam eveni cum quiderchil
+
+eaqui opti dist, con nobis unt, voluptus estia num enis adiorro omnienda volectota con niet ped mi, ommod quam earum, ver-
+um quo in re vention nonseniendus ate invenduciis solupta spedit illibus aligni que re sa nonecabo. Mos adit ulpari se voluptatia
+
+doluptat ullaccae voloreh enditiur, inciatq uaestrunt.</p>
+            </div>
+            <div id="chapsec2" class="chapsec">
+                <p class="fronttext" id="f2">ABOUT</p>
+                <h2 id="title2" class="collapsing">OUR HISTORY</h2>
+                <p id="para2" class="conttext" class="collapsing">Oluptat eoste laboreped que necte pore, tenis eum ut es et, tenderem ium volo occae vellic tet, tem nam eveni cum quiderchil
+
+eaqui opti dist, con nobis unt, voluptus estia num enis adiorro omnienda volectota con niet ped mi, ommod quam earum, ver-
+um quo in re vention nonseniendus ate invenduciis solupta spedit illibus aligni que re sa nonecabo. Mos adit ulpari se voluptatia
+
+doluptat ullaccae voloreh enditiur, inciatq uaestrunt.</p>
+            </div>
+            <div id="chapsec3" class="chapsec">
+                <p class="fronttext" id="f3">OFFICERS</p>
+                <h2 style="align-self: flex-start;" id="officerlist" class="collapsing">OFFICERS</h2>
+                <div class="officercont" class="collapsing">
+                    <div class="officer">
+                        <h4 style="flex-direction: row;"><img src="images/symbolplacehold.jpg" class="symbol">PRESIDENT</h4>
+                        <img src="images/johnny_bui.jpg" class="officerimg">
+                    </div>
+                    <div class="officer">
+                        <h4 style="flex-direction: row;"><img src="images/symbolplacehold.jpg" class="symbol">V. PRESIDENT</h4>
+                        <img src="images/johnny_bui.jpg" class="officerimg">
+                    </div>
+                    <div class="officer">
+                        <h4 style="flex-direction: row;"><img src="images/symbolplacehold.jpg" class="symbol">SECRETARY</h4>
+                        <img src="images/johnny_bui.jpg" class="officerimg">
+                    </div>
+                </div>
+                <div class="officercont" class="collapsing">
+                    <div class="officer">
+                        <h4 style="flex-direction: row;"><img src="images/symbolplacehold.jpg" class="symbol">SGT. ARMS</h4>
+                        <img src="images/johnny_bui.jpg" class="officerimg">
+                    </div>
+                    <div class="officer">
+                        <h4 style="flex-direction: row;"><img src="images/symbolplacehold.jpg" class="symbol">TREASURER</h4>
+                        <img src="images/johnny_bui.jpg" class="officerimg">
+                    </div>
+                    <div class="officer">
+                        <h4 style="flex-direction: row;"><img src="images/symbolplacehold.jpg" class="symbol">REPORTER</h4>
+                        <img src="images/johnny_bui.jpg" class="officerimg">
+                    </div>
+                </div>
+            </div>
+            <div id="chapsec4" class="chapsec">
+                <p class="fronttext" id="f4">CHAPTER ACTIVITIES</p>
+                <div id="sec4left" class="collapsing">
+                    <h2>CHAPTER ACTIVITIES</h2>
+                    <h4>FUNDRAISING</h4>
+                    <p class="bodytext">Oluptat eoste laboreped que necte pore, tenis eum ut es et, tender-em ium volo occae vellic tet, tem nam eveni cum quiderchil eaquiopti dist, con nobis unt, voluptus estia num enis adiorro omnien-da volectota con niet ped mi, ommod quam earum, verum quoin re vention nonseniendus ate invenduciis solupta spedit illibusaligni que re sa nonecabo. Mos adit ulpari se voluptatia doluptatullaccae voloreh enditiur, inciatq uaestrunt.Bis aut fuga. Dem quist voluptat ulpa cone
+                    </p>
+                    <h4 style="margin-top: 0px;">OTHER EVENTS</h4>
+                    <p class="bodytext">rehenis estemporeped ut moditatatem quam re occum eos demvellecum aut apic tem quame ducipsu ndenia consequae volumque peribeate nonsequ isiminvendae este nones quam ni cus alique sam quuntis et velento ruptas est qui te que latur?</p>
+                </div>
+                <img src="images/DSC_0494.JPG" id="sec4right" class="collapsing">
+            </div>
+        <div id="footer">
+            <p id="desc">Atiamusda dolles ad qui omnis dolorem sin por a inis et quaernatum voluptia </p>
+            <div id="footgroup">
+                <p class="foottext">Piet untius, te et qui tectus, sit qui a velloribus dit harum in reius sum aut quatio </p>
+                <hr class="linksplit2">
+                <p class="foottext">Piet untius, te et qui tectus, sit qui a velloribus dit harum in reius sum aut quatio </p>
+            </div>
+        </div>
+    </body>
+</html>
