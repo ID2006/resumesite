@@ -12,87 +12,90 @@
                     Height2 = $("#chapsec2").css('height', 'auto').height(),
                     Height3 = $("#chapsec3").css('height', 'auto').height(),
                     Height4 = $("#chapsec4").css('height', 'auto').height();
-
-                $(".chapsec").css("height", "300px")
-
+                
+                $(".chapsec").css("height", "300px");
+                
                 $("#chapsec1").mouseleave(function(){
                     $("#title1").css("visibility", "collapse");
                     $("#para1").css("visibility", "collapse");
-                    $("#chapsec1").css("height", "300px");
+                    $("#chapsec1").animate({height: 300});
                     $("#chapsec1").css("flex-direction", "row");
                     $("#f1").show();
                     $("body").css("height", "auto");
                 });
-
+                
                 $("#chapsec1").mouseenter(function(){
+                    $("#sec1").css("background-image", "none");
                     $("#title1").css("visibility", "visible");
                     $("#para1").css("visibility", "visible");
-                    $("#sec1").animate({height: Height1});
+                    $("#chapsec1").animate({height: Height1});
                     $("#f1").hide();
                     $("#chapsec1").css("flex-direction", "column");
-                    $("body").css("height", "auto");
                 });
-
+                
                 $("#chapsec2").mouseleave(function(){
+                    $("#chapsec2").css("background-image", "url(images/14907159_571792339683443_2967300826296140104_n.jpg)")
                     $("#title2").css("visibility", "collapse");
                     $("#para2").css("visibility", "collapse");
-                    $("#chapsec2").css("height", "300px");
+                    $("#chapsec2").animate({height: 300});
                     $("#chapsec2").css("flex-direction", "row");
                     $("#f2").show();
                     $("body").css("height", "auto");
                 });
-
+                
                 $("#chapsec2").mouseenter(function(){
+                    $("#chapsec2").css("background-image", "none")
                     $("#title2").css("visibility", "visible");
                     $("#para2").css("visibility", "visible");
-                    $("#sec1").animate({height: Height2});
+                    $("#chapsec2").animate({height: Height2});
                     $("#chapsec2").css("flex-direction", "column");
                     $("#f2").hide();
                     $("body").css("height", "auto");
                 });
-
+                
                 $("#chapsec3").mouseleave(function(){
                     $("#officerlist").css("visibility", "collapse");
                     $(".officercont").css("visibility", "collapse");
                     $(".officer").css("visibility", "collapse");
-                    $("#chapsec3").css("height", "300px");
+                    $("#chapsec3").animate({height: 300});
                     $("#chapsec3").css("flex-direction", "row");
                     $("#f3").show();
-                    $("body").css("height", "auto");
                 });
-
+                
                 $("#chapsec3").mouseenter(function(){
                     $("#officerlist").css("visibility", "visible");
                     $(".oficercont").css("visibility", "visible");
                     $(".officer").css("visibility", "visible");
-                    $("#sec1").animate({height: Height3});
                     $("#f3").hide();
                     $("#chapsec3").css("flex-direction", "column");
-                    $("body").css("height", "auto");
+                    
+                    var Height3 = $("#chapsec3").css('height', 'auto').height();
+                    
+                    $("#chapsec3").animate({height: Height3});
                 });
-
+                
                 $("#chapsec4").mouseleave(function(){
                     $("#sec4left").css("visibility", "collapse");
                     $("#sec4right").css("visibility", "collapse");
                     $("#chapsec4").css("flex-direction", "row");
-                    $("#chapsec4").css("height", "300px");
+                    $("#chapsec4").animate({height: 300});
                     $("#f4").show();
                     $("body").css("height", "auto");
                 });
-
+                
                 $("#chapsec4").mouseenter(function(){
                     $("#sec4left").css("visibility", "visible");
                     $("#sec4right").css("visibility", "visible");
                     $("#chapsec4").css("flex-direction", "row");
-                    $("#sec1").animate({height: Height4});
+                    $("#chapsec4").animate({height: Height4});
                     $("#f4").hide();
                     $("body").css("height", "auto");
                 });
-
+                
                 var menu = $("linkcontain"),
                     y = menu.scrollTop(),
                     height = $("#splasharea").height();
-
+                
                 if (y > height) {
                     menu.addClass("fix");
                 } else {
@@ -103,10 +106,10 @@
     <body id="schoolbody">
        <div id="splasharea">
             <div id="introcontain">
-                <p id="introtext">
-                    <img src="images/TSA_Logo_4c.jpg" id="tsalogo">
-                </p>
-                <a href="#menu" id="enterlink">EXPLORE</a>
+               <div id="logohold">
+                    <p id="introtext">CAB</p>
+                    <img src="images/TSA-Technology-Student-Association-Emblem.png" id="tsalogo">
+               </div>
             </div>
         </div>
         <div class="linkcontain" id="menu">
@@ -119,7 +122,6 @@
             <div id="chapsec1" class="chapsec">
                 <p class="fronttext" id="f1">MOTTO/CREED</p>
                 <h2 id="title1" style="align-self: flex-start;" class="collapsing">MOTTO / CREED</h2>
-                <br/>
                 <p id="para1" class="conttext" class="collapsing">Oluptat eoste laboreped que necte pore, tenis eum ut es et, tenderem ium volo occae vellic tet, tem nam eveni cum quiderchil
 
 eaqui opti dist, con nobis unt, voluptus estia num enis adiorro omnienda volectota con niet ped mi, ommod quam earum, ver-
@@ -142,30 +144,36 @@ doluptat ullaccae voloreh enditiur, inciatq uaestrunt.</p>
                 <h2 style="align-self: flex-start;" id="officerlist" class="collapsing">OFFICERS</h2>
                 <div class="officercont" class="collapsing">
                     <div class="officer">
-                        <h4 style="flex-direction: row;"><img src="images/symbolplacehold.jpg" class="symbol">PRESIDENT</h4>
-                        <img src="images/johnny_bui.jpg" class="officerimg">
+                        <h4 style="flex-direction: row; justify-content: center;"><img src="images/president.png" class="symbol">PRESIDENT</h4>
+                        <img src="images//patrick.jpg" class="officerimg">
+                        <h4 style="align-content: center; margin-top: 0px">Patrick Taylor</h4>
                     </div>
                     <div class="officer">
-                        <h4 style="flex-direction: row;"><img src="images/symbolplacehold.jpg" class="symbol">V. PRESIDENT</h4>
-                        <img src="images/johnny_bui.jpg" class="officerimg">
+                        <h4 style="flex-direction: row; justify-content: center;"><img src="images/vp.png" class="symbol">V. PRESIDENT</h4>
+                        <img src="images/jenna.JPG" class="officerimg">
+                        <h4 style="align-content: center; margin-top: 0px">Jenna Hunt</h4>
                     </div>
                     <div class="officer">
-                        <h4 style="flex-direction: row;"><img src="images/symbolplacehold.jpg" class="symbol">SECRETARY</h4>
-                        <img src="images/johnny_bui.jpg" class="officerimg">
+                        <h4 style="flex-direction: row; justify-content: center;"><img src="images/secretary.png" class="symbol">SECRETARY</h4>
+                        <img src="images/hannah.jpeg" class="officerimg">
+                        <h4 style="align-content: center; margin-top: 0px">Hannah Rubin</h4>
                     </div>
                 </div>
                 <div class="officercont" class="collapsing">
                     <div class="officer">
-                        <h4 style="flex-direction: row;"><img src="images/symbolplacehold.jpg" class="symbol">SGT. ARMS</h4>
-                        <img src="images/johnny_bui.jpg" class="officerimg">
+                        <h4 style="flex-direction: row; justify-content: center;"><img src="images/SaA.png" class="symbol">SGT. ARMS</h4>
+                        <img src="images/ethan.JPG" class="officerimg">
+                        <h4 style="align-content: center; margin-top: 0px">Ethan Budzynski</h4>
                     </div>
                     <div class="officer">
-                        <h4 style="flex-direction: row;"><img src="images/symbolplacehold.jpg" class="symbol">TREASURER</h4>
-                        <img src="images/johnny_bui.jpg" class="officerimg">
+                        <h4 style="flex-direction: row; justify-content: center;"><img src="images/treasurer.svg" class="symbol">TREASURER</h4>
+                        <img src="images/jack.JPG" class="officerimg">
+                        <h4 style="align-content: center; margin-top: 0px">Jack Seiffert</h4>
                     </div>
                     <div class="officer">
-                        <h4 style="flex-direction: row;"><img src="images/symbolplacehold.jpg" class="symbol">REPORTER</h4>
+                        <h4 style="flex-direction: row; justify-content: center;"><img src="images/reporter.png" class="symbol">REPORTER</h4>
                         <img src="images/johnny_bui.jpg" class="officerimg">
+                        <h4 style="align-content: center; margin-top: 0px">Sohum Shenoy</h4>
                     </div>
                 </div>
             </div>

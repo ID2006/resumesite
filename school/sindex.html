@@ -8,7 +8,7 @@
         <script>
             $(document).ready(function(){
                 var Height1 = $("#sec1").css('height', 'auto').height(),
-                    Height2 = $("#majorcontain").css('height', 'auto').height(),
+                    Height2 = $("#sec2").css('height', 'auto').height(),
                     Height3 = $("#sec3").css('height', 'auto').height(),
                     Height4 = $("#sec4").css('height', 'auto').height(),
                     Height5 = $("#majorcontain").css('height', 'auto').height(),
@@ -19,59 +19,69 @@
                 $("#sec1").mouseleave(function(){
                     $("#sec1left").css("visibility", "collapse");
                     $("#sec1right").css("visibility", "collapse");
-                    $("#sec1").css("height", "300px");
+                    $("#sec1").animate({height: 300});
                     $("#f1").show();
                 });
 
                 $("#sec1").mouseenter(function(){
+                    $("#sec1").css("background-image", "none");
                     $("#sec1left").css("visibility", "visible");
                     $("#sec1right").css("visibility", "visible");
                     $("#f1").hide();
-                    $("#sec1").animate({height: Height1});
+                    $("#sec1").stop(true, true).delay(250).animate({height: Height1});
                 });
 
 
                 $("#sec2").mouseleave(function(){
+                    $("#sec2").css("background-image", "url(images/DSC_3628.JPG)");
                     $("#majorcontain").css("visibility", "collapse");
-                    $("#sec2").css("height", "300px");
+                    $("#sec2").animate({height: 300});
                     $("#sec2").css("flex-direction", "row");
                     $("#f2").show();
                 });
 
                 $("#sec2").mouseenter(function(){
+                    $("#sec2").css("background-image", "none");
+                    $("#sec").css("overflow", "hidden")
+                    $("#majorcontain").css("overflow", "hidden")
+                    $("#majorcontain").css("height", "auto")
+                    $("#sec2").css('height', 'auto');
                     $("#majorcontain").css("visibility", "visible");
-                    $("#sec2").animate({height: '100%'});
                     $("#sec2").css("flex-direction", "column");
                     $("#f2").hide();
                 });
 
                 $("#sec3").mouseleave(function(){
+                    $("#sec3").css("background-image", "url(images/DSC_8069.JPG)");
                     $("#sec3left").css("visibility", "collapse");
                     $("#sec3right").css("visibility", "collapse");
-                    $("#sec3").css("height", "300px");
+                    $("#sec3").animate({height: 300});
                     $("#f3").show();;
                 });
 
                 $("#sec3").mouseenter(function(){
+                    $("#sec3").css("background-image", "none");
                     $("#sec3left").css("visibility", "visible");
                     $("#sec3right").css("visibility", "visible");
-                    $("#sec3").animate({height: Height3});
+                    $("#sec3").stop(true, true).delay(250).animate({height: Height3});
                     $("#f3").hide();
                 });
 
                 $("#sec4").mouseleave(function(){
+                    $("#sec4").css("background-image", "url(images/DSC_0022.JPG)");
                     $("#sec4left").css("visibility", "collapse");
                     $("#sec4right").css("visibility", "collapse");
                     $("#sec4").css("flex-direction", "row");
-                    $("#sec4").css("height", "300px");
+                    $("#sec4").animate({height: 300});
                     $("#f4").show();
                 });
 
                 $("#sec4").mouseenter(function(){
+                    $("#sec4").css("background-image", "none");
                     $("#sec4left").css("visibility", "visible");
                     $("#sec4right").css("visibility", "visible");
                     $("#sec4").css("flex-direction", "row");
-                    $("#sec4").animate({height: Height4});
+                    $("#sec4").stop(true, true).delay(250).animate({height: Height4});
                     $("#f4").hide();
                 });
 
@@ -93,7 +103,6 @@
                 <p id="introtext">
                     <img src="images//cab_logo.png" class="cablogo">
                 </p>
-                <a href="#menu" id="enterlink">EXPLORE</a>
             </div>
         </div>
         <div class="linkcontain" id="menu">
@@ -103,12 +112,13 @@
                 <li><a href="../index.html" class="button">DESIGN BRIEF</a></li>
             </ul>
         </div>
+        <div id="schoolmain">
             <div id="sec1" class="schoolsec">
                 <div class="folded">
                     <p class="fronttext" id="f1">ABOUT</p>
                 </div>
                 <div id="sec1left" class="collapsing">
-                    <h2>ABOUT</h2>
+                    <h4>ABOUT</h4>
                     <p class="bodytext">Oluptat eoste laboreped que necte pore, tenis eum ut es et, tenderem ium volo occae vellic tet, tem nam eveni cum quiderchil eaqui opti dist, con nobis unt, voluptus estia num enis adiorro omnienda volectota con niet ped mi, ommod quam earum, verum quo in re vention nonseniendus ate invenduciis solupta spedit illibus aligni que re sa nonecabo. Mos adit ulpari se voluptatia doluptat ullaccae voloreh enditiur, inciatq uaestrunt.
 Bis aut fuga. Dem quist voluptat ulpa cone occum cuptate caeserendis santia suntium faccum landund elest, as quid quo ipisse soloratur? Qui cuptatur?</p>
                     <img id="year25" src="images/MECH_Cab_Calloway_25_years_edit2.jpg">
@@ -123,36 +133,58 @@ em ium volo occae vellic tet, tem nam eveni cum quiderchil eaqui opti dist, con 
                 <div id="majorcontain" class="collapsing">
                     <h3>MAJORS</h3>
                     <div id="imagecontain">
-                        <div class="imagesize"><img class="majorpics" src="images/DSC_4555_major.jpg">
-                        <p class="imagewords">descdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdesc</p>
+                        <div class="imagesize">
+                        <p class="majorname">DIGITAL MEDIA</p>
+                        <img class="majorpics" src="images/DSC_4555_major.jpg">
+                        <div class="imagewords"><p class="words">Students develop the ability to create and synthesize new ideas within the context of creative writing, oratory, photography, cinematography and other emerging technologies. Students use most aspects of the Adobe Creative Suite primarily on iMacs. The Adobe Creative Suite’s encompass: Photoshop, InDesign, Illustrator, After Effects, Premiere Pro. Also covered in various Communication Art’s classes include, Apple’s GarageBand, iMovie, iDVD, and Microsoft Office. A new addition to the Communication Arts Department is the Google apps as they integrate documents, spreadsheets and presentations into the process of interdisciplinary problem-solving projects throughout the year. Students create written, audio-visual and electronic content for publication, and use technology including various computer software and digital cameras.</p></div>
                         </div>
-                        <div class="imagesize"><img class="majorpics" src="images/DSC_4740_major.jpg">
-                        <p class="imagewords">descdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdesc</p>
+                        <div class="imagesize">
+                        <p class="majorname">PIANO</p>
+                        <img class="majorpics" src="images/DSC_4740_major.jpg">
+                        <div class="imagewords"><p class="words">The CCSA Piano Studio is designed to support and steward the study of musicianship through developing piano skills, both as a soloist and, as the opportunity arises, in collaboration with other artists.  Curriculum is largely individualized, depending on the goals of each student.  Success comes to those students who, on a daily basis, commit themselves to focusing on their music and working on it independently, as well as in small groups, or with individual feedback from the teacher.  There are no limitations on what they can learn.  The CCSA Piano Studio supports both middle school and high school programs.</p></div>
                         </div>
-                        <div class="imagesize"><img class="majorpics" src="images/DSC_5164_major.jpg">
-                        <p class="imagewords">descdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdesc</p>
-                        </div>
-                    </div>
-                    <div id="imagecontain">
-                        <div class="imagesize"><img class="majorpics" src="images/DSC_0119_major.jpg">
-                        <p class="imagewords">descdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdesc</p>
-                        </div>
-                        <div class="imagesize"><img class="majorpics" src="images/DSC_0177_major.jpg">
-                        <p class="imagewords">descdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdesc</p>
-                        </div>
-                        <div class="imagesize"><img class="majorpics" src="images/theatre_major.jpg">
-                        <p class="imagewords">descdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdesc</p>
+                        <div class="imagesize">
+                        <p class="majorname">VOCAL</p>
+                        <img class="majorpics" src="images/DSC_5164_major.jpg">
+                        <div class="imagewords"><p class="words">Students are taught how to sing in a healthy manner, including techniques for solo and ensemble performances. Emphasis is placed on diction, phrasing, vowel placement, and proper tonal production. Students learn to sing in several different languages that might include Italian, French, German, Latin, and African. Students sing in musical styles appropriate to the Renaissance, Baroque, Classical, Romantic and Contemporary time periods. Students explore basic music theory through sight-reading, ear training, dictation and class discussion. Advanced students study the theory and practice of elementary harmony.</p></div>
                         </div>
                     </div>
                     <div id="imagecontain">
-                        <div class="imagesize"><img class="majorpics" src="images/DSC_1047_major.jpg">
-                        <p class="imagewords">descdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdesc</p>
+                        <div class="imagesize">
+                        <p class="majorname">VISUAL</p>
+                        <img class="majorpics" src="images/DSC_0119_major.jpg">
+                        <div class="imagewords"><p class="words">Through a variety of tools, techniques, and processes, students grow to better understand the interplay of different media, styles, and design principles in the creation of their own work. Learning is designed around primary concepts. One of these concepts is visual literacy, the ability to observe and interpret an awareness and appreciation of design. Students will learn to communicate conceptual ideas through use of a visual, symbolic language. Students will achieve the goal of attaining visual literacy through immersion by participation in self and peer critiques and intense research of specific artists of their own choosing. Students explore a variety of experiences that include drawing, painting, ceramics, printmaking, sculpture, fiber and digital art. Historical references are related to the works in progress. Career opportunities in the field of art are explored.</p></div>
                         </div>
-                        <div class="imagesize"><img class="majorpics" src="images/DSC_3628_major.jpg">
-                        <p class="imagewords">descdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdesc</p>
+                        <div class="imagesize">
+                        <p class="majorname">INSTRUMENTAL</p>
+                        <img class="majorpics" src="images/DSC_0177_major.jpg">
+                        <div class="imagewords"><p class="words">Instrumental music students must be studying instruments of the concert band, orchestra (i.e. woodwinds, brass, percussion or strings), or piano. Students focus on individual achievement and development during class time and group dynamics in extracurricular bands and ensembles. Instrumental music students:<br>
+                        - Study solo and ensemble literature in the classical idiom<br>
+                        - Study music theory and music composition<br>
+                        - Sight sing music in treble and bass clefs<br>
+                        - Perform at least one solo composition each year</p></div>
                         </div>
-                        <div class="imagesize"><img class="majorpics" src="images/DSC_0412_major.JPG">
-                        <p class="imagewords">descdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdescdesc</p>
+                        <div class="imagesize">
+                        <p class="majorname">THEATRE</p>
+                        <img class="majorpics" src="images/theatre_major.jpg">
+                        <div class="imagewords"><p class="words">The Cab Calloway theatre department develops students into artists who are prepared  to produce their own work. Our course study explores acting, directing and playwriting while guiding students to develop and lead their own productions beyond the classroom. Students will explore in-depth scene and character analysis while learning to connect to a character’s given circumstances. They will connect to their physical instrument, freeing themselves of body tensions and discovering their natural speaking voice. Students will explore theatre history, philosophy and theory by diving into theatrical texts ranging from classical to contemporary.</p></div>
+                        </div>
+                    </div>
+                    <div id="imagecontain">
+                        <div class="imagesize">
+                        <p class="majorname">STRINGS</p>
+                        <img class="majorpics" src="images/DSC_1047_major.jpg">
+                        <div class="imagewords"><p class="words">Strings classes are offered at Cab for 6th through 12th grade as a major.  There is also a non-majors strings class offered to any student in grades 6-8 (at least one year of prior experience on your instrument is recommended).  All string students play in three concerts per year. In addition to preparing 5-6 pieces for each concert, string students learn music theory, ear and rhythm training, sight-reading skills, music composition, music history and improvisation. There are three after school orchestras offered to string students.  The Red Clay Middle School Orchestra is offered for the intermediate level student. The Red Clay High School Orchestra meets Tuesday evenings 7-8:30 and is for the advanced students in middle school and any high school student. The Cab Calloway Chamber Orchestra is for the very advanced string students and is by audition only.</p></div>
+                        </div>
+                        <div class="imagesize">
+                        <p class="majorname">DANCE</p>
+                        <img class="majorpics" src="images/DSC_3628_major.jpg">
+                        <div class="imagewords"><p class="words">Students learn through movement exploration. They address the development of self-image, social contacts and peer relationships, and begin to examine the social and cultural elements and contexts, and experience expanded cognitive aspects in both perception and creative process. Dance curriculum focuses on training in the disciplines of ballet, jazz, and modern techniques, as well as multicultural dance traditions. Throughout their career at Cab Calloway, students study dance history, psychology of dance, improvisation, choreography, injury prevention, anatomy, physiology, and nutrition/eating disorders.</p></div>
+                        </div>
+                        <div class="imagesize">
+                        <p class="majorname">TECHNICAL THEATRE</p>
+                        <img class="majorpics" src="images/DSC_0412_major.JPG">
+                        <div class="imagewords"><p class="words">The Technical Theatre program at Cab Calloway School of the Arts seeks to educate students in the skills necessary to support all arts programs in their performances. Studies focus on operation of lighting technology, sound technology, scenic design, basic carpentry skills, and stage management. Students are integral parts of the newly renovated theatre at Cab Calloway, providing all of the necessary technical support for every performance in the space; whether those performances are from the school or from outside groups. Students are encouraged to be involved in every aspect of performances, including stage management, design, casting, rehearsals, scenic construction, and more. Although the program is designed to prepare students to pursue technical theatre or design post-graduation, all students are encouraged to participate in the program as it provides an excellent opportunity for growth and appreciation of all arts areas.</p></div>
                         </div>
                     </div>
                 </div>
@@ -172,7 +204,7 @@ alique sam quuntis et velento ruptas est qui te que latur?</p>
             <div id="sec4" class="schoolsec">
                 <p class="fronttext" id="f4">STEM CURRICULUM</p>
                 <div id="sec4left" class="collapsing">
-                    <h4>CAREER AND TECHNOLOGY COURSES</h4>
+                    <h4>STEM CURRICULUM</h4>
                     <p class="bodytext">Oluptat eoste laboreped que necte pore, tenis eum ut es et, tender-em ium volo occae vellic tet, tem nam eveni cum quiderchil eaquiopti dist, con nobis unt, voluptus estia num enis adiorro omnien-da volectota con niet ped mi, ommod quam earum, verum quoin re vention nonseniendus ate invenduciis solupta spedit illibusaligni que re sa nonecabo. Mos adit ulpari se voluptatia doluptatullaccae voloreh enditiur, inciatq uaestrunt.Bis aut fuga. Dem quist voluptat ulpa cone occum cuptate cae-serendis santia suntium faccum landund elest, as quid quo ipisse soloratur? Qui cuptatur? Itatis et officate enienimperro volum hilique volor reptati urempos quatium vidis remporrovit faces quo deribusam, idendandis estis
 rehenis estemporeped ut moditatatem quam re occum eos dem
 vellecum aut apic tem quame ducipsu ndenia consequae volum
@@ -181,12 +213,15 @@ alique sam quuntis et velento ruptas est qui te que latur?</p>
                 </div>
                 <img src="images/DSC_0515_edit.jpg" id="sec4right" class="collapsing">
             </div>
+        </div>
         <div id="footer">
-            <p id="desc">Atiamusda dolles ad qui omnis dolorem sin por a inis et quaernatum voluptia </p>
+            <p class="foottext" id="desc"><a href="http://www.cabcallowayschool.org/">LEARN MORE ABOUT CAB</a></p>
             <div id="footgroup">
-                <p class="foottext">Piet untius, te et qui tectus, sit qui a velloribus dit harum in reius sum aut quatio </p>
+                <p class="foottext" id="desc"><a href="sources.html">DESIGN BRIEF</a></p>
                 <hr class="linksplit2">
-                <p class="foottext">Piet untius, te et qui tectus, sit qui a velloribus dit harum in reius sum aut quatio </p>
+                <p class="foottext" id="desc"><a href="school/chapter.html">CHAPTER</a></p>
+                <hr class="linksplit2">
+                <p class="foottext" id="desc"><a href="school/sindex.html">SCHOOL</a></p>
             </div>
         </div>
     </body>
