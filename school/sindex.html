@@ -85,19 +85,23 @@
                     $("#f4").hide();
                 });
 
-                var menu = $("linkcontain"),
-                    y = menu.scrollTop(),
-                    height = $("#splasharea").height();
-
-                if (y > height) {
-                    menu.addClass("fix");
-                } else {
-                    menu.removeClass("fix");
-                }
             });
+
+            var splashHeight = $(window).height();
+
+            function updateHeader(){
+            if(window.pageYOffset > splashHeight){
+                $(".linkcontain").css("top","0px");
+                $(".linkcontain").css("position","fixed");
+            }else{
+                $(".linkcontain").css("top","100vh");
+                $(".linkcontain").css("position","absolute");
+                $(".linkcontain").css("margin-bottom", "20px");
+            }
+        }
         </script>
     </head>
-    <body id="indexbody">
+    <body id="indexbody" onscroll="updateHeader()">
        <div id="splasharea">
             <div id="introcontain">
                 <p id="introtext">
@@ -215,13 +219,17 @@ alique sam quuntis et velento ruptas est qui te que latur?</p>
             </div>
         </div>
         <div id="footer">
-            <p class="foottext" id="desc"><a href="http://www.cabcallowayschool.org/">LEARN MORE ABOUT CAB</a></p>
+           <div id="exlinks">
+                <p class="foottext" id="desc" style="color: #825ea8"><br><a href="http://www.cabcallowayschool.org/" style="color: #825ea8">LEARN MORE ABOUT CAB</a></p>
+                <p class="foottext" id="desc"><a href="http://detsa.org/">DE TSA</a></p>
+                <p class="foottext" id="desc"><a href="http://www.tsaweb.org/">NATIONAL TSA</a></p>
+            </div>
             <div id="footgroup">
                 <p class="foottext" id="desc"><a href="/index.html">DESIGN BRIEF</a></p>
                 <hr class="linksplit2">
-                <p class="foottext" id="desc"><a href="chapter.html">CHAPTER</a></p>
-                <hr class="linksplit2">
                 <p class="foottext" id="desc"><a href="sindex.html">SCHOOL</a></p>
+                <hr class="linksplit2">
+                <p class="foottext" id="desc"><a href="chapter.html">CHAPTER</a></p>
             </div>
         </div>
     </body>
