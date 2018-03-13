@@ -380,6 +380,9 @@ a:link, a:hover, a:visited, a:active {
     visibility: collapse;
 }
 #dropdown {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     height: 100%;
     width: auto;
 }
@@ -400,14 +403,7 @@ a:link, a:hover, a:visited, a:active {
     padding: 0px;
 }
 .linkol a:hover {
-    display: flex;
-    height: 80px;
-    justify-content: center;
-    align-items: center;
-    margin: 0px;
-    padding: 0px;
-    background-color: none;
-    width: 100%;
+    background-color: #282627;
 }
 #intro {
     height: auto;
@@ -508,17 +504,20 @@ h2 {
     background-color: white;
 }
 #links_1 {
+    position: relative;
+    top: -20px;
+    left: -5px;
+    visibility: collapse;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    height: 0px;
-    width: 188px;
+    width: 0px;
     margin: 0px;
     padding: 0px;
     list-style: none;
     color: white;
-    visibility: collapse;
+    -webkit-transition: height 2s;
 }
 button, input[type="submit"], input[type="reset"] {
     background: none !important;

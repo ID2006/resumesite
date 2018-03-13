@@ -16,31 +16,34 @@
 
                 $(".schoolsec").css("height", "300px")
 
-                $("#sec1").mouseleave(function(){
+                $("#sec1").dblclick(function(){
                     $("#sec1left").css("visibility", "collapse");
                     $("#sec1right").css("visibility", "collapse");
                     $("#sec1").animate({height: 300});
                     $("#f1").show();
+                    $("#sec1").css("cursor", "pointer");
                 });
 
-                $("#sec1").mouseenter(function(){
+                $("#sec1").click(function(){
                     $("#sec1").css("background-image", "none");
                     $("#sec1left").css("visibility", "visible");
                     $("#sec1right").css("visibility", "visible");
                     $("#f1").hide();
                     $("#sec1").stop(true, true).delay(250).animate({height: Height1});
+                    $("#sec1").css("cursor", "default");
                 });
 
 
-                $("#sec2").mouseleave(function(){
+                $("#sec2").dblclick(function(){
                     $("#sec2").css("background-image", "url(images/DSC_3628.JPG)");
                     $("#majorcontain").css("visibility", "collapse");
                     $("#sec2").animate({height: 300});
                     $("#sec2").css("flex-direction", "row");
                     $("#f2").show();
+                    $("#sec2").css("cursor", "pointer");
                 });
 
-                $("#sec2").mouseenter(function(){
+                $("#sec2").click(function(){
                     $("#sec2").css("background-image", "none");
                     $("#sec").css("overflow", "hidden")
                     $("#majorcontain").css("overflow", "hidden")
@@ -49,40 +52,45 @@
                     $("#majorcontain").css("visibility", "visible");
                     $("#sec2").css("flex-direction", "column");
                     $("#f2").hide();
+                    $("#sec2").css("cursor", "default");
                 });
 
-                $("#sec3").mouseleave(function(){
+                $("#sec3").dblclick(function(){
                     $("#sec3").css("background-image", "url(images/DSC_8069.JPG)");
                     $("#sec3left").css("visibility", "collapse");
                     $("#sec3right").css("visibility", "collapse");
                     $("#sec3").animate({height: 300});
                     $("#f3").show();;
+                    $("#sec3").css("cursor", "pointer");
                 });
 
-                $("#sec3").mouseenter(function(){
+                $("#sec3").click(function(){
                     $("#sec3").css("background-image", "none");
                     $("#sec3left").css("visibility", "visible");
                     $("#sec3right").css("visibility", "visible");
                     $("#sec3").stop(true, true).delay(250).animate({height: Height3});
                     $("#f3").hide();
+                    $("#sec3").css("cursor", "default");
                 });
 
-                $("#sec4").mouseleave(function(){
+                $("#sec4").dblclick(function(){
                     $("#sec4").css("background-image", "url(images/DSC_0022.JPG)");
                     $("#sec4left").css("visibility", "collapse");
                     $("#sec4right").css("visibility", "collapse");
                     $("#sec4").css("flex-direction", "row");
                     $("#sec4").animate({height: 300});
                     $("#f4").show();
+                    $("#sec4").css("cursor", "pointer");
                 });
 
-                $("#sec4").mouseenter(function(){
+                $("#sec4").click(function(){
                     $("#sec4").css("background-image", "none");
                     $("#sec4left").css("visibility", "visible");
                     $("#sec4right").css("visibility", "visible");
                     $("#sec4").css("flex-direction", "row");
                     $("#sec4").stop(true, true).delay(250).animate({height: Height4});
                     $("#f4").hide();
+                    $("#sec4").css("cursor", "default");
                 });
 
             });

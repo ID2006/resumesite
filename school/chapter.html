@@ -4,7 +4,6 @@
         <meta charset="UTF-8">
         <title>Our Chapter</title>
         <link rel="stylesheet" href="sindex.css">
-    </head>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script>
             $(document).ready(function(){
@@ -15,7 +14,7 @@
                 
                 $(".chapsec").css("height", "300px");
                 
-                $("#chapsec1").mouseleave(function(){
+                $("#chapsec1").dblclick(function(){
                     $("#title1").css("visibility", "collapse");
                     $("#para1").css("visibility", "collapse");
                     $("#chapsec1").animate({height: 300});
@@ -24,7 +23,7 @@
                     $("body").css("height", "auto");
                 });
                 
-                $("#chapsec1").mouseenter(function(){
+                $("#chapsec1").click(function(){
                     $("#sec1").css("background-image", "none");
                     $("#title1").css("visibility", "visible");
                     $("#para1").css("visibility", "visible");
@@ -33,7 +32,7 @@
                     $("#chapsec1").css("flex-direction", "column");
                 });
                 
-                $("#chapsec2").mouseleave(function(){
+                $("#chapsec2").dblclick(function(){
                     $("#chapsec2").css("background-image", "url(images/14907159_571792339683443_2967300826296140104_n.jpg)")
                     $("#title2").css("visibility", "collapse");
                     $("#para2").css("visibility", "collapse");
@@ -43,7 +42,7 @@
                     $("body").css("height", "auto");
                 });
                 
-                $("#chapsec2").mouseenter(function(){
+                $("#chapsec2").click(function(){
                     $("#chapsec2").css("background-image", "none")
                     $("#title2").css("visibility", "visible");
                     $("#para2").css("visibility", "visible");
@@ -53,7 +52,7 @@
                     $("body").css("height", "auto");
                 });
                 
-                $("#chapsec3").mouseleave(function(){
+                $("#chapsec3").dblclick(function(){
                     $("#officerlist").css("visibility", "collapse");
                     $(".officercont").css("visibility", "collapse");
                     $(".officer").css("visibility", "collapse");
@@ -62,7 +61,7 @@
                     $("#f3").show();
                 });
                 
-                $("#chapsec3").mouseenter(function(){
+                $("#chapsec3").click(function(){
                     $("#officerlist").css("visibility", "visible");
                     $(".oficercont").css("visibility", "visible");
                     $(".officer").css("visibility", "visible");
@@ -74,7 +73,7 @@
                     $("#chapsec3").animate({height: Height3});
                 });
                 
-                $("#chapsec4").mouseleave(function(){
+                $("#chapsec4").dblclick(function(){
                     $("#sec4left").css("visibility", "collapse");
                     $("#sec4right").css("visibility", "collapse");
                     $("#chapsec4").css("flex-direction", "row");
@@ -83,7 +82,7 @@
                     $("body").css("height", "auto");
                 });
                 
-                $("#chapsec4").mouseenter(function(){
+                $("#chapsec4").click(function(){
                     $("#sec4left").css("visibility", "visible");
                     $("#sec4right").css("visibility", "visible");
                     $("#chapsec4").css("flex-direction", "row");
@@ -92,18 +91,24 @@
                     $("body").css("height", "auto");
                 });
                 
-                var menu = $("linkcontain"),
-                    y = menu.scrollTop(),
-                    height = $("#splasharea").height();
-                
-                if (y > height) {
-                    menu.addClass("fix");
-                } else {
-                    menu.removeClass("fix");
-                }
             });
         </script>
-    <body id="schoolbody">
+        </head>
+    <body id="schoolbody" onscroll="updateHead()">
+      <script >
+                var splashHeight = $(window).height();
+                
+                function updateHead(){
+                if(window.pageYOffset > splashHeight){
+                    $(".linkcontain").css("top","0px");
+                    $(".linkcontain").css("position","fixed");
+                }else{
+                    $(".linkcontain").css("top","100vh");
+                    $(".linkcontain").css("position","absolute");
+                    $(".linkcontain").css("margin-bottom", "20px");
+                }
+                };
+        </script>
        <div id="splasharea">
             <div id="introcontain">
                <div id="logohold">
@@ -172,7 +177,7 @@ doluptat ullaccae voloreh enditiur, inciatq uaestrunt.</p>
                     </div>
                     <div class="officer">
                         <h4 style="flex-direction: row; justify-content: center;"><img src="images/reporter.png" class="symbol">REPORTER</h4>
-                        <img src="images/johnny_bui.jpg" class="officerimg">
+                        <img src="images/DSC_0005.png" class="officerimg">
                         <h4 style="align-content: center; margin-top: 0px">Sohum Shenoy</h4>
                     </div>
                 </div>

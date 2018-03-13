@@ -193,7 +193,7 @@ h3 {
 h4 {
     color: black;
     font-family: "Neutraface", sans-serif;
-    font-size: 50px;
+    font-size: 45px;
     margin-left: 10px;
     margin-bottom: 0px;
 }
@@ -276,7 +276,7 @@ h4 {
     height: 120px;
     margin: 0px;
     position: relative;
-    top: -15px;
+    top: -10px;
 }
 .linksplit2 {
     height: 80px;
@@ -287,6 +287,7 @@ h4 {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    margin-top: 100px;
 }
 #tsalogo {
     width: 350px;
@@ -304,7 +305,7 @@ h4 {
     display: flex;
     flex-direction: row;
     align-items: center;
-    
+    padding-bottom: 10px;
 }
 .officercont {
     display: flex;
@@ -336,6 +337,7 @@ h4 {
     height: 20vh;
     margin-bottom: 20px;
     animation-duration: 1s;
+    cursor: pointer;
 }
 .collapsing {
     visibility: hidden;
