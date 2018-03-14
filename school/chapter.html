@@ -21,6 +21,7 @@
                     $("#chapsec1").css("flex-direction", "row");
                     $("#f1").show();
                     $("body").css("height", "auto");
+                    $("#chapsec1").css("cursor", "pointer")
                 });
                 
                 $("#chapsec1").click(function(){
@@ -30,16 +31,17 @@
                     $("#chapsec1").animate({height: Height1});
                     $("#f1").hide();
                     $("#chapsec1").css("flex-direction", "column");
+                    $("#chapsec1").css("cursor", "default");
                 });
                 
                 $("#chapsec2").dblclick(function(){
-                    $("#chapsec2").css("background-image", "url(images/14907159_571792339683443_2967300826296140104_n.jpg)")
                     $("#title2").css("visibility", "collapse");
                     $("#para2").css("visibility", "collapse");
                     $("#chapsec2").animate({height: 300});
                     $("#chapsec2").css("flex-direction", "row");
                     $("#f2").show();
                     $("body").css("height", "auto");
+                    $("#chapsec2").css("cursor", "pointer")
                 });
                 
                 $("#chapsec2").click(function(){
@@ -50,6 +52,7 @@
                     $("#chapsec2").css("flex-direction", "column");
                     $("#f2").hide();
                     $("body").css("height", "auto");
+                    $("#chapsec2").css("cursor", "default");
                 });
                 
                 $("#chapsec3").dblclick(function(){
@@ -59,6 +62,7 @@
                     $("#chapsec3").animate({height: 300});
                     $("#chapsec3").css("flex-direction", "row");
                     $("#f3").show();
+                    $("#chapsec3").css("cursor", "pointer")
                 });
                 
                 $("#chapsec3").click(function(){
@@ -67,6 +71,7 @@
                     $(".officer").css("visibility", "visible");
                     $("#f3").hide();
                     $("#chapsec3").css("flex-direction", "column");
+                    $("#chapsec3").css("cursor", "default");
                     
                     var Height3 = $("#chapsec3").css('height', 'auto').height();
                     
@@ -80,6 +85,7 @@
                     $("#chapsec4").animate({height: 300});
                     $("#f4").show();
                     $("body").css("height", "auto");
+                    $("#chapsec4").css("cursor", "pointer")
                 });
                 
                 $("#chapsec4").click(function(){
@@ -89,12 +95,22 @@
                     $("#chapsec4").animate({height: Height4});
                     $("#f4").hide();
                     $("body").css("height", "auto");
+                    $("#chapsec4").css("cursor", "default");
                 });
                 
             });
         </script>
+        <style>
+            .fronttext {
+                color: #19458C;
+            }
+            h2 {
+                color: #19458C;
+            }
+        </style>
         </head>
     <body id="schoolbody" onscroll="updateHead()">
+    <div id="chapmain">
       <script >
                 var splashHeight = $(window).height();
                 
@@ -207,6 +223,7 @@ doluptat ullaccae voloreh enditiur, inciatq uaestrunt.</p>
                 <hr class="linksplit2">
                 <p class="foottext" id="desc"><a href="chapter.html">CHAPTER</a></p>
             </div>
+        </div>
         </div>
     </body>
 </html>
