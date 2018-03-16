@@ -52,6 +52,12 @@
     list-style: none;
     color: white;
 }
+#sourcelinks {
+    height: auto;
+    margin: none;
+    padding: none;
+    color: white;
+}
 #introbox {
     display: flex;
     width: 40%;
@@ -68,6 +74,9 @@
     background-color: white;
     margin: 0px;
     padding: 0px;
+}
+#forspace {
+    height: 70vh;
 }
 a:link, a:hover, a:visited, a:active {
     text-decoration: none;
@@ -228,11 +237,15 @@ h2 {
     height: auto;
     width: 75%;
     line-height: 1.3;
+    text-indent: 40px;
 }
 #fillimage {
-    height: 200px;
-    width: 45%;
-    background-color: white;
+    overflow: hidden;
+    height: auto;
+    width: auto;
+}
+.contentimg {
+    max-width: 600px;
 }
 #links_1 {
     position: relative;
@@ -499,9 +512,12 @@ h2 {
     line-height: 1.3;
 }
 #fillimage {
-    height: 200px;
-    width: 45%;
-    background-color: white;
+    overflow: hidden;
+    height: auto;
+    width: auto;
+}
+.contentimg {
+    max-width: 400px;
 }
 #links_1 {
     position: relative;
