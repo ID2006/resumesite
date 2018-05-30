@@ -1,0 +1,431 @@
+body {
+    display: flex;
+    flex-direction: row;
+    background-color: #84C8CC;
+    margin: 0px;
+    overflow-x: hidden;
+}
+#sidemenu {
+    display: flex;
+    align-self: flex-start;
+    align-content: center;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 350px;
+    background-color: white;
+    box-shadow: 4px 0px 10px black;
+    margin: 0px;
+    position: fixed;
+    z-index: 1;
+}
+
+#spacer {
+    display: flex;
+    align-self: flex-start;
+    align-content: center;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 350px;
+    background-color: white;
+    margin: 0px;
+    z-index: 0;
+}
+#spacingtext {
+    overflow-x: hidden;
+}
+#samlogo {
+    max-width: 480px;
+    margin: 0px;
+    padding: 0px;
+}
+#links{
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.pagelinks {
+    display: flex;
+    width: 330px;
+    height: 100px;
+    align-items: center;
+    justify-content: center;
+}
+.pagelinks:hover {
+    -webkit-transition: background-color 1.5s;
+    background-color: #c5f5ff;
+}
+li {
+    list-style: none;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding: 0px;
+    font-family: 'PT Sans', sans-serif;
+    font-weight: 600;
+    font-size: 48px;
+    letter-spacing: 2px;
+}
+h3 {
+    -webkit-transition: letter-spacing 2s;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 26px;
+    margin-bottom: 26px;
+    padding: 0px;
+    font-family: 'PT Sans', sans-serif;
+    font-weight: 600;
+    font-size: 48px;
+    letter-spacing: inherit;
+    margin: 0px;
+}
+h3:hover {
+    -webkit-transition: letter-spacing 2s;
+    letter-spacing: 30px;
+}
+#pagehead {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 334px;
+    width: 100%;
+    background-color: none;
+}
+.arrows {
+    max-width: 40px;
+    max-height: 40px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+h1 {
+    margin: 0px;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 72px;
+    color: white;
+}
+#content {
+    margin-left: 10px;
+    width: auto;
+    margin-right: 10px;
+}
+p {
+    font-family: 'PT Sans Caption', sans-serif;
+    font-size: 18px;
+    height: auto;
+    padding-right: 10px;
+}
+.bodytext {
+    width: 100%;
+}
+#textimg1 {
+    max-width: 400px;
+    margin: 10px;
+}
+#sec1 {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+}
+#sec2 {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+}
+#sec3 {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+h2{
+    margin: 0px;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 48px;
+    color: #C5F5FF;
+}
+ul {
+    margin: 0px;
+    padding: 0px;
+}
+#navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    height: 125px;
+    width: auto;
+    z-index: 2;
+}
+#navbar2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    height: 125px;
+    width: auto;
+    z-index: 2;
+    position: relative;
+    top: 100px;
+}
+#navbar3 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    height: 125px;
+    width: auto;
+    z-index: 2;
+    position: relative;
+    top: 200px;
+}
+#navbar4 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    height: 125px;
+    width: auto;
+    z-index: 2;
+    position: relative;
+    top: 300px;
+}
+#headimg {
+    z-index: 4;
+    height: 90%;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+#gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: space-around;
+    align-items: center;
+}
+.displayimg {
+    max-width: 300px;;
+    margin: 10px;
+}
+#movetothecenter {
+    width: auto;
+    display: flex;
+    justify-content: center;
+    z-index: 5;
+}
+
+/* Marker for media query Marker for media query Marker for media query Marker for media query */
+
+@media only screen and (max-width: 991px) {
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: #84C8CC;
+    margin: 0px;
+    overflow-x: hidden;
+}
+#sidemenu {
+    display: flex;
+    position: inherit;
+    align-self: flex-start;
+    align-content: center;
+    flex-direction: column;
+    height: 400px;
+    width: 100vw;
+    background-color: white;
+    margin: 0px;
+    z-index: 1;
+}
+#spacer {
+    visibility: collapse;
+    height: 0px;
+}
+#spacingtext {
+    overflow-x: hidden;
+    visibility: collapse;
+    height: 0px;
+}
+#samlogo {
+    justify-content: center;
+    max-width: 480px;
+    margin: 0px;
+    padding: 0px;
+}
+#links{
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.pagelinks {
+    display: flex;
+    width: 330px;
+    height: 100px;
+    align-items: center;
+    justify-content: center;
+}
+.pagelinks:hover {
+    -webkit-transition: background-color 1.5s;
+    background-color: #c5f5ff;
+}
+li {
+    list-style: none;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding: 0px;
+    font-family: 'PT Sans', sans-serif;
+    font-weight: 600;
+    font-size: 48px;
+    letter-spacing: 2px;
+}
+h3 {
+    -webkit-transition: letter-spacing 2s;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 26px;
+    margin-bottom: 26px;
+    padding: 0px;
+    font-family: 'PT Sans', sans-serif;
+    font-weight: 600;
+    font-size: 48px;
+    letter-spacing: inherit;
+    margin: 0px;
+}
+h3:hover {
+    -webkit-transition: letter-spacing 2s;
+    letter-spacing: 30px;
+}
+#pagehead {
+    visibility: collapse;
+    height: 0px;
+}
+.arrows {
+    max-width: 40px;
+    max-height: 40px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+h1 {
+    margin: 0px;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 72px;
+    color: white;
+}
+#content {
+    position: relative;
+    top: -940px;
+    margin-left: 10px;
+    width: auto;
+    margin-right: 10px;
+}
+p {
+    font-family: 'PT Sans Caption', sans-serif;
+    font-size: 18px;
+    height: auto;
+    padding-right: 10px;
+}
+.bodytext {
+    width: 100%;
+}
+#textimg1 {
+    max-width: 350px;
+}
+#sec1 {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+}
+#sec2 {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+}
+#sec3 {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+h2{
+    margin: 0px;
+    font-family: 'PT Sans Caption', sans-serif;
+    font-size: 48px;
+    color: #C5F5FF;
+}
+ul {
+    margin: 0px;
+    padding: 0px;
+}
+#navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    height: 125px;
+    width: auto;
+    z-index: 2;
+}
+#navbar2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    height: 125px;
+    width: auto;
+    z-index: 2;
+    position: relative;
+    top: 100px;
+}
+#navbar3 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    height: 125px;
+    width: auto;
+    z-index: 2;
+    position: relative;
+    top: 200px;
+}
+#navbar4 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    height: 125px;
+    width: auto;
+    z-index: 2;
+    position: relative;
+    top: 300px;
+}
+#headimg {
+    z-index: 4;
+    height: 90%;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+#gallery {
+    display: flex;
+    flex-wrap: wrap;
+}
+.displayimg {
+    max-width: 100%;
+    margin: 10px;
+}
+#movetothecenter {
+    width: auto;
+    display: flex;
+    justify-content: center;
+    z-index: 5;
+}
+}
